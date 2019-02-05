@@ -1,5 +1,5 @@
 import React from 'react'
-import Wrapper from '../components/wrapper'
+import Wrapper from '../components/Wrapper'
 import '../css/Vars.css'
 import '../css/Normalizer.css'
 import '../css/Style.css'

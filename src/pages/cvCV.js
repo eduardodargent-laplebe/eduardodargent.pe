@@ -1,12 +1,12 @@
 import React from 'react'
-import Wrapper from '../components/wrapper'
-// import bioImg from '../images/eduardo-dargent.jpg'
+import Wrapper from '../components/Wrapper'
+import bioImg from '../images/eduardo-dargent.jpg'
 
 export default () => (
   <Wrapper>
     <main className="main">
       <div className="hero">
-        {/* <img alt="" className="hero-img" src={bioImg} /> */}
+        <img alt="" className="hero-img" src={bioImg} />
       </div>
 
       <div className="main-bio-text">
