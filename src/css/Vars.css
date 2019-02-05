@@ -1,0 +1,93 @@
+:root {
+  /* COLORS */
+
+  --color-gray--lightest: hsl(0, 0%, 95%);
+  --color-gray--light: hsl(0, 0%, 80%);
+  --color-gray--neutral: hsl(0, 0%, 50%);
+  --color-gray--dark: hsl(0, 0%, 35%);
+  --color-gray--darkest: hsl(0, 0%, 20%);
+
+  --color-green: hsl(147, 100%, 25%);
+  --color-green--hover: hsl(147, 100%, 35%);
+  --color-green-yellow: hsl(79, 44%, 41%);
+  --color-yellow: hsl(38, 90%, 60%);
+  --color-yellow-red: hsl(17, 83%, 53%);
+  --color-red: hsl(358, 99%, 44%);
+  --color-red--hover: hsl(358, 99%, 54%);
+
+  --color-white--alpha: rgba(255, 255, 255, 0.25);
+  --color-black--alpha: rgba(0, 0, 0, 0.25);
+  --color-red--alpha: rgba(255, 0, 0, 0.25);
+
+  --color-text: black;
+  --color-background: white;
+
+  /* MEASURES */
+
+  --page-width: 1280px;
+  --page-columns: 4;
+  --column-width: 100% / var(--page-columns);
+  --border-radius: 4px;
+
+  /* FONTS */
+
+  --font-size: var(--font-size--paragraph);
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  @import url(https://fonts.googleapis.com/css?family=Vollkorn);
+  @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+  --font-sans: 'Open Sans', sans-serif;
+  --font-serif: 'Vollkorn', serif;
+  --font-mono: 'Cutive Mono', monospace;
+
+  --font-family: var(--font-sans);
+
+  --font-size--menu: 13px;
+  --font-size--h1: 26px;
+  --font-size--h2: 24px;
+  --font-size--h3: 18px;
+  --font-size--paragraph: 15px;
+  --font-size--quote: 22px;
+  --font-size--details: 12px;
+
+  /* LINKS */
+
+  --link-color: var(--color-text);
+
+  /* Z-INDEX */
+
+  --z--hero-data: 1;
+  --z--menu: 2;
+  --z--topbar: 3;
+  --z--modal: 4;
+
+  /* BREAKPOINTS */
+
+  --bp-phone-tablet: 600px;
+  --bp-tablet-desktop: 900px;
+  --bp-desktop-hd: 1200px;
+  --bp-hd-fullhd: 1800px;
+
+  /* TIMES */
+
+  --t-xl: 1600ms;
+  --t-l: 800ms;
+  --t-m: 400ms;
+  --t-s: 200ms;
+  --t-xs: 100ms;
+
+  /* SHADOWS */
+
+  --sh-z1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --sh-z2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --sh-z3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --sh-z4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  --sh-z5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  --shadow: var(--sh-z1);
+
+  /* EASES */
+
+  --easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+  --easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}

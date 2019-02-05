@@ -1,0 +1,103 @@
+/******************* MOVIL **************************/
+/******************* MOVIL **************************/
+/******************* MOVIL **************************/
+/******************* MOVIL **************************/
+/******************* MOVIL **************************/
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: block;
+    padding-top: 0;
+  }
+
+  .header {
+    position: static;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .top-bar {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .menu {
+    display: none;
+    padding: 6rem 3rem 3rem 6rem;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: red;
+    top: 0;
+  }
+
+  .fancy-bar {
+    top: 6rem;
+  }
+
+  .material-icons.material-menu--close {
+    display: none;
+  }
+
+  .nav {
+    padding: 3rem 0 0 0;
+    background: chocolate;
+    flex-grow: 1;
+  }
+
+  /* .logo--small {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 3rem;
+  }
+
+  .logo--large {
+    display: none;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  .material-icons.material-menu-open {
+    display: block;
+    position: fixed;
+    margin-right: 3rem;
+    right: 0;
+  } */
+
+  /* .material-icons.material-menu-close {
+    display: none;
+    position: fixed;
+    margin-right: 3rem;
+    right: 0;
+  }
+
+  .menu-footer {
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 3rem;
+    background: white;
+    width: 100%;
+    height: 100%;
+  } */
+
+  /* .nav {
+    margin: 0;
+  } */
+
+  .footer {
+    /* padding-bottom: 3rem; */
+    /* position: fixed; */
+  }
+
+  .main {
+    margin-left: 0;
+    /* margin: 0 3rem 3rem 3rem; */
+    /* position: relative; */
+  }
+}
