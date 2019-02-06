@@ -1,0 +1,42 @@
+const path= requiere ('path')
+
+exports.createPages = (
+  {
+    graphql, boundActionCrators
+  }
+) => {
+  const {createCv} = boundActionCreators
+  return Promise((resolve, reject) => 
+  {
+    const blogPostTempleta = path.resolve('src/pages/cv.js')
+    resolve(
+      graphql('
+        {
+          allContenfullCv (limit:100){
+            edges{
+              node{
+                id
+                slug
+              }
+            }
+          }
+        }
+      ').then((result)=>{
+          if(result.errors){
+            reject(result.errors)
+          }
+          result.data.allContentfulCv.edge.forEach((edge) => {
+            createPage ({
+              path: edge.node.slug,
+              component: cvWeb,
+              context: {
+                slug: edge.node.slug
+              }
+            })
+          })
+        return
+      })
+    )
+  }
+  )
+}
