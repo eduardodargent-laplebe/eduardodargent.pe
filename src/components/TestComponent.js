@@ -1,14 +1,14 @@
 // import React, { Component} from 'react';
 // import PropTypes from 'prop-types';
 
-// class Cv extends Component{
+// class TestComponent extends Component{
 //   render(){
 //     return (
 //     )
 //   }
 // }
 
-// Cv.proptypes = {
+// TestComponent.proptypes = {
 //   data: PropTypes.object.isRequiered
 // }
 

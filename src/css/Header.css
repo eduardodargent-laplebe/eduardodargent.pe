@@ -6,8 +6,8 @@
 }
 
 .fancy-bar {
-  /* background: url(../img/biografia-img-line-left.jpg) no-repeat; */
-  background-size: cover;
+  background: #eeeeee url('../images/favicon32.png') repeat-y;
+  /* background-size: cover; */
   width: 3rem;
   height: 100%;
   position: absolute;

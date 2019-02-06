@@ -11,10 +11,10 @@ export default () => (
 
     <nav className="nav">
       <Link to="/cv/">CV</Link>
-      <Link to="/ideas/">Ideas</Link>
-      <Link to="/opiniones/">Opiniones</Link>
-      <Link to="/publicaciones/">Publicaciones</Link>
-      <Link to="/ensenanza/">Enseñanza</Link>
+      <Link to="/ideas/">IDEAS</Link>
+      <Link to="/opiniones/">OPINIONES</Link>
+      <Link to="/publicaciones/">PUBLICACIONES</Link>
+      <Link to="/ensenanza/">ENSEÑANZA</Link>
     </nav>
 
     <Footer />
