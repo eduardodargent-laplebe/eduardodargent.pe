@@ -9,12 +9,13 @@ import '../css/NavBar.css'
 export default class NavBar extends React.Component {
   constructor() {
     super()
+  }
+
+  componentDidMount() {
     if (window) {
       window.matchMedia('(max-width: 900px)').addListener(this.resetMenu)
     }
   }
-
-  componentDidMount() {}
 
   resetMenu(bp) {
     if (bp.matches) {
