@@ -2,15 +2,19 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Brand from './Brand'
 import SocialIcon from './SocialIcon'
-import * as DATA from '../utils/Data'
+// import * as DATA from '../utils/Data'
 import { $ } from '../utils/Utils'
 import '../css/NavBar.css'
 
 export default class NavBar extends React.Component {
   constructor() {
     super()
-    DATA.BP_PHABLET_TABLET.addListener(this.resetMenu)
+    if (window) {
+      window.matchMedia('(max-width: 900px)').addListener(this.resetMenu)
+    }
   }
+
+  componentDidMount() {}
 
   resetMenu(bp) {
     if (bp.matches) {
@@ -25,10 +29,12 @@ export default class NavBar extends React.Component {
   }
 
   closeMenu() {
-    if (DATA.BP_PHABLET_TABLET.matches) {
-      $('.nav-bar').style.display = 'none'
-      $('.top-open').style.display = 'inline-block'
-      $('.top-close').style.display = 'none'
+    if (window) {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        $('.nav-bar').style.display = 'none'
+        $('.top-open').style.display = 'inline-block'
+        $('.top-close').style.display = 'none'
+      }
     }
   }
   render() {
