@@ -1,0 +1,27 @@
+/* responsive */
+
+.cv .hero-img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.cv h1 {
+}
+
+.cv h3 {
+  font-size: var(--font-size--h3);
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.cv h3::before {
+  content: '_ ';
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .hero-img {
+    max-width: 100%;
+  }
+}

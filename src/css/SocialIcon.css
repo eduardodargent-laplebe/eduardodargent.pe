@@ -2,24 +2,21 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* border-radius: 50%; */
+  width: 30px;
+  height: 30px;
+  background: black;
+  margin-right: 0.5rem;
 }
 
-a.social-icon {
-  text-decoration: none;
-  width: 36px;
-  height: 36px;
+.social-icon svg {
+  fill: white;
+  width: 22px;
+  height: 22px;
 }
 
-a.social-icon svg {
-  fill: black;
-  width: 24px;
-  height: 24px;
-}
-
-a.social-icon:hover {
-  background: var(--color-white--alpha);
-}
+/* a.social-icon:hover {
+  background: black;
+} */
 
 button.social-icon {
   cursor: pointer;
@@ -45,8 +42,8 @@ button.social-icon:hover svg {
 
 /* responsive */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   a.social-icon {
     background: var(--color-white--alpha);
   }
-}
+} */

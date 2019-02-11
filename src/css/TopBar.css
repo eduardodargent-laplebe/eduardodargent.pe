@@ -1,23 +1,20 @@
 .top-bar {
-  /* background: cyan; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 3rem;
-  align-items: center;
-  padding: 0 1rem;
-  /* display: none; */
+  display: none;
 }
 
-/* .logo--small {
-  display: none;
-  font-size: 2rem;
-  text-decoration: none;
-}*/
-
-.material-icons.material-menu {
-  /* display: none; */
+@media (max-width: 900px) {
+  .top-bar {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    padding: 0 1rem;
+    background: white;
+  }
+  i.top-close {
+    display: none;
+  }
 }

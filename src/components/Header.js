@@ -1,11 +1,12 @@
 import React from 'react'
-import Menu from './Menu'
+import NavBar from './NavBar'
 import TopBar from './TopBar'
 import '../css/Header.css'
 
 export default () => (
   <header className="header">
+    <div className="fancy-bar" />
     <TopBar />
-    <Menu />
+    <NavBar />
   </header>
 )

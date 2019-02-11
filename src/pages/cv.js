@@ -1,32 +1,28 @@
 import React from 'react'
-import Wrapper from '../components/Wrapper'
+import Page from '../components/Page'
 import { graphql } from 'gatsby'
+import '../css/cv.css'
 
-class IndexPage extends React.Component {
-  render() {
-    const html = this.props.data.markdownRemark.html
-    const img = this.props.data.contentfulAsset.file.url
-    return (
-      <Wrapper>
-        <main className="main">
-          <div className="hero">
-            <img alt="" className="hero-img" src={img} />
-          </div>
-
-          <div className="main-bio-text">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: html,
-              }}
-            />
-          </div>
-        </main>
-      </Wrapper>
-    )
-  }
+export default props => {
+  const html = props.data.markdownRemark.html
+  const img = props.data.contentfulAsset.file.url
+  return (
+    <Page class="cv">
+      <div className="hero">
+        <img alt="" className="hero-img" src={img} />
+      </div>
+      <div className="text">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: html,
+          }}
+        />
+      </div>
+    </Page>
+  )
 }
 
-export const queryCV = graphql`
+export const cvQuery = graphql`
   query {
     contentfulAsset {
       file {
@@ -38,5 +34,3 @@ export const queryCV = graphql`
     }
   }
 `
-
-export default IndexPage

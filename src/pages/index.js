@@ -1,14 +1,11 @@
 import React from 'react'
-import Wrapper from '../components/Wrapper'
-import '../css/Vars.css'
-import '../css/Normalizer.css'
-import '../css/Style.css'
-import '../css/MediaQueries.css'
+import Page from '../components/Page'
+import '../utils/Vars.css'
+import '../utils/Normalizer.css'
 
 export default () => (
-  <Wrapper>
-    <main className="main home">
-      <section className="books">
+  <Page>
+    {/* <section className="books">
         <div className="contenedor">
           <div className="art-list">
             <h3>CONTRA HISTORIA DEL PERÚ</h3>
@@ -31,7 +28,6 @@ export default () => (
             <div className="year">2015</div>
           </div>
         </div>
-      </section>
-    </main>
-  </Wrapper>
+      </section> */}
+  </Page>
 )

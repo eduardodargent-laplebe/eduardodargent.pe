@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  padding: 3rem;
+  /* background: var(--color-bar-1); */
+  overflow: auto;
+  flex-grow: 1;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .page {
+    display: block;
+    height: auto;
+  }
+  .main {
+    overflow: visible;
+    /* flex-grow: 0; */
+    margin-top: 3rem;
+  }
+}

@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
 :root {
   /* COLORS */
 
@@ -7,13 +11,19 @@
   --color-gray--dark: hsl(0, 0%, 35%);
   --color-gray--darkest: hsl(0, 0%, 20%);
 
-  --color-green: hsl(147, 100%, 25%);
-  --color-green--hover: hsl(147, 100%, 35%);
-  --color-green-yellow: hsl(79, 44%, 41%);
-  --color-yellow: hsl(38, 90%, 60%);
-  --color-yellow-red: hsl(17, 83%, 53%);
-  --color-red: hsl(358, 99%, 44%);
-  --color-red--hover: hsl(358, 99%, 54%);
+  --color-secundary: #7e2d34;
+
+  --color-bar-1: hsl(165, 2%, 66%);
+  --color-bar-1--hover: hsl(165, 2%, 46%);
+
+  --color-bar-2: hsl(1, 97%, 85%);
+  --color-bar-2--hover: hsl(1, 97%, 65%);
+
+  --color-bar-3: hsl(97, 49%, 88%);
+  --color-bar-3--hover: hsl(97, 49%, 68%);
+
+  --color-bar-4: hsl(210, 6%, 87%);
+  --color-bar-4--hover: hsl(210, 6%, 67%);
 
   --color-white--alpha: rgba(255, 255, 255, 0.25);
   --color-black--alpha: rgba(0, 0, 0, 0.25);
@@ -24,30 +34,25 @@
 
   /* MEASURES */
 
-  --page-width: 1280px;
-  --page-columns: 4;
-  --column-width: 100% / var(--page-columns);
-  --border-radius: 4px;
+  /* --page-width: 1280px; */
+  /* --page-columns: 4; */
+  /* --column-width: 100% / var(--page-columns); */
+  /* --border-radius: 4px; */
 
   /* FONTS */
 
   --font-size: var(--font-size--paragraph);
-
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-  @import url(https://fonts.googleapis.com/css?family=Vollkorn);
-  @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-  --font-sans: 'Open Sans', sans-serif;
-  --font-serif: 'Vollkorn', serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-serif: 'IBM Plex Serif', serif;
   --font-mono: 'Cutive Mono', monospace;
 
   --font-family: var(--font-sans);
 
-  --font-size--menu: 13px;
+  --font-size--menu: 16px;
   --font-size--h1: 26px;
-  --font-size--h2: 24px;
-  --font-size--h3: 18px;
-  --font-size--paragraph: 15px;
-  --font-size--quote: 22px;
+  --font-size--h2: 16px;
+  --font-size--h3: 14px;
+  --font-size--paragraph: 16px;
   --font-size--details: 12px;
 
   /* LINKS */

@@ -1,25 +1,6 @@
-.main {
-  position: relative;
-  padding: 3rem;
-  /* background: green; */
-  margin-left: 25rem;
-  /* height: 100vh; */
-  width: calc(100% - 25rem);
-}
-
-.hero {
+/* .hero {
   right: 0;
   margin-bottom: 3rem;
-}
-
-.experience-title {
-  font-family: var(--font-serif);
-}
-
-.experience-title::before {
-  content: '_ ';
-  font-family: var(--font-serif);
-  font-weight: bold;
 }
 
 .date {
@@ -83,4 +64,4 @@
   height: 11rem;
   padding: 0.5rem;
   flex-direction: column;
-}
+} */
