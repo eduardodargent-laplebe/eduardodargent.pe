@@ -1,20 +1,21 @@
 import React from 'react'
 import Page from '../components/Page'
 import { graphql } from 'gatsby'
-import '../css/cv.css'
+import './cv.css'
 
-export default props => {
-  const html = props.data.markdownRemark.html
-  const img = props.data.contentfulAsset.file.url
+export default ({ data }) => {
+  const foto = data.allContentfulCv.edges[0].node.foto.file.url
+  const texto =
+    data.allContentfulCv.edges[0].node.texto.childMarkdownRemark.html
   return (
     <Page class="cv">
       <div className="hero">
-        <img alt="" className="hero-img" src={img} />
+        <img alt="" className="hero-img" src={foto} />
       </div>
       <div className="text">
         <div
           dangerouslySetInnerHTML={{
-            __html: html,
+            __html: texto,
           }}
         />
       </div>
@@ -24,13 +25,21 @@ export default props => {
 
 export const cvQuery = graphql`
   query {
-    contentfulAsset {
-      file {
-        url
+    allContentfulCv {
+      edges {
+        node {
+          foto {
+            file {
+              url
+            }
+          }
+          texto {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
       }
-    }
-    markdownRemark {
-      html
     }
   }
 `

@@ -4,13 +4,9 @@ import Brand from './Brand'
 import SocialIcon from './SocialIcon'
 // import * as DATA from '../utils/Data'
 import { $ } from '../utils/Utils'
-import '../css/NavBar.css'
+import './NavBar.css'
 
 export default class NavBar extends React.Component {
-  constructor() {
-    super()
-  }
-
   componentDidMount() {
     if (window) {
       window.matchMedia('(max-width: 900px)').addListener(this.resetMenu)
@@ -46,7 +42,13 @@ export default class NavBar extends React.Component {
           <Link onClick={this.closeMenu} to="/cv/" activeClassName="active">
             CV
           </Link>
-          <Link onClick={this.closeMenu} to="/ideas/" activeClassName="active">
+          <Link
+            onClick={this.closeMenu}
+            to="/ideas/"
+            getProps={({ isPartiallyCurrent }) =>
+              isPartiallyCurrent ? { className: 'active' } : null
+            }
+          >
             IDEAS
           </Link>
           <Link
@@ -76,7 +78,7 @@ export default class NavBar extends React.Component {
           <SocialIcon name="twitter" isLink url="http://www.google.com" />
         </div>
         <div className="email">
-          <a href="mailto:hola@eduardodargent.pe">hola@eduardodargent.pe</a>
+          <a href="mailto:edargent@gmail.com">edargent@gmail.com</a>
         </div>
       </div>
     )

@@ -1,6 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans'); */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root {
   /* COLORS */
@@ -11,25 +12,25 @@
   --color-gray--dark: hsl(0, 0%, 35%);
   --color-gray--darkest: hsl(0, 0%, 20%);
 
-  --color-secundary: #7e2d34;
+  --color-bar-1: hsl(290, 7%, 83%);
+  --color-bar-1--hover: hsl(290, 7%, 93%);
 
-  --color-bar-1: hsl(165, 2%, 66%);
-  --color-bar-1--hover: hsl(165, 2%, 46%);
+  --color-bar-2: hsl(1, 46%, 53%);
+  --color-bar-2--hover: hsl(1, 46%, 63%);
 
-  --color-bar-2: hsl(1, 97%, 85%);
-  --color-bar-2--hover: hsl(1, 97%, 65%);
+  --color-bar-3: hsl(337, 14%, 36%);
+  --color-bar-3--hover: hsl(337, 14%, 46%);
 
-  --color-bar-3: hsl(97, 49%, 88%);
-  --color-bar-3--hover: hsl(97, 49%, 68%);
-
-  --color-bar-4: hsl(210, 6%, 87%);
-  --color-bar-4--hover: hsl(210, 6%, 67%);
+  --color-bar-4: hsl(240, 7%, 23%);
+  --color-bar-4--hover: hsl(240, 7%, 33%);
 
   --color-white--alpha: rgba(255, 255, 255, 0.25);
   --color-black--alpha: rgba(0, 0, 0, 0.25);
   --color-red--alpha: rgba(255, 0, 0, 0.25);
+  --color-green--alpha: rgba(0, 255, 0, 0.25);
+  --color-blue--alpha: rgba(0, 0, 255, 0.25);
 
-  --color-text: black;
+  --color-text: var(--color-bar-4);
   --color-background: white;
 
   /* MEASURES */
@@ -41,19 +42,21 @@
 
   /* FONTS */
 
-  --font-size: var(--font-size--paragraph);
-  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
+  /* --font-sans: 'IBM Plex Sans', sans-serif; */
   --font-serif: 'IBM Plex Serif', serif;
   --font-mono: 'Cutive Mono', monospace;
 
   --font-family: var(--font-sans);
 
   --font-size--menu: 16px;
-  --font-size--h1: 26px;
-  --font-size--h2: 16px;
-  --font-size--h3: 14px;
-  --font-size--paragraph: 16px;
+  --font-size--h1: 32px;
+  --font-size--h2: 18px;
+  --font-size--h3: 16px;
+  --font-size--paragraph: 14px;
   --font-size--details: 12px;
+
+  --font-size: var(--font-size--paragraph);
 
   /* LINKS */
 

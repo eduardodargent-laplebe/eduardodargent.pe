@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import '../css/Page.css'
+import './Page.css'
 
 export default props => (
   <div className={`page ${props.class}`}>

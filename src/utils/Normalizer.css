@@ -32,6 +32,19 @@ h4,
 h5,
 h6 {
   margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: var(--font-size--h1);
+}
+
+h2 {
+  font-size: var(--font-size--h2);
+}
+
+h3 {
+  font-size: var(--font-size--h3);
 }
 
 p {
@@ -56,7 +69,6 @@ img {
   vertical-align: middle;
   border-style: none; /* Remove the border on images inside links in IE 10-. */
   border: 0;
-  /* display: block; */
 }
 
 input,

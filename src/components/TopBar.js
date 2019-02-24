@@ -2,11 +2,9 @@ import React from 'react'
 import Brand from './Brand'
 // import * as DATA from '../utils/Data'
 import { $ } from '../utils/Utils'
-import '../css/TopBar.css'
+import './TopBar.css'
 
 export default class TopBar extends React.Component {
-  componentDidMount() {}
-
   openMenu() {
     if (window) {
       if (window.matchMedia('(max-width: 900px)').matches) {

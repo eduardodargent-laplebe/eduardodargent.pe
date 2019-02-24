@@ -1,0 +1,39 @@
+.article {
+  background: var(--color-bar-1--hover);
+  padding: 3rem;
+  min-height: 100%;
+}
+
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.article-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-image {
+  width: 100%;
+}
+
+.article-taxonomy {
+  flex-grow: 1;
+}
+
+.article-title {
+  font-family: var(--font-serif);
+  color: var(--color-bar-2);
+  margin-bottom: 0.5rem;
+}
+
+.article-date {
+  font-size: var(--font-size--details);
+}
+
+.article-text {
+  font-size: var(--font-size--details);
+}

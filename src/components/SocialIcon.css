@@ -4,21 +4,25 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background: black;
+  background: var(--color-bar-1--hover);
   margin-right: 0.5rem;
 }
 
 .social-icon svg {
-  fill: white;
+  fill: var(--color-bar-4);
   width: 22px;
   height: 22px;
 }
 
 /* a.social-icon:hover {
-  background: black;
+  background: var(--color-bar-3);
+}
+
+a.social-icon:hover svg {
+  fill: white;
 } */
 
-button.social-icon {
+/* button.social-icon {
   cursor: pointer;
   width: 24px;
   height: 24px;
@@ -38,7 +42,7 @@ button.social-icon:hover {
 
 button.social-icon:hover svg {
   fill: var(--color-text);
-}
+} */
 
 /* responsive */
 

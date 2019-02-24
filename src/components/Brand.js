@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../images/logo.svg'
-import iso from '../images/iso.svg'
-import '../css/Brand.css'
+import Logo from '../images/logo.svg'
+import Iso from '../images/iso.svg'
+import './Brand.css'
 
 export default ({ type, isLink }) => {
-  const brand = {
-    logo: logo,
-    iso: iso,
+  const svg = {
+    logo: <Logo className={type} />,
+    iso: <Iso className={type} />,
   }[type]
-  const img = <img className={type} src={brand} alt="" />
-
-  return isLink ? <Link to="/">{img}</Link> : img
+  return isLink ? <Link to="/">{svg}</Link> : svg
 }

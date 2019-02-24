@@ -16,7 +16,6 @@
   display: block;
   padding: 0.5rem;
   text-decoration: none;
-  /* border-top: 1px solid var(--color-bar-4); */
 }
 
 .nav a:first-child {
@@ -24,17 +23,16 @@
 }
 
 .nav a:hover {
-  background: var(--color-secundary);
+  background: var(--color-bar-3);
   color: white;
 }
 
 .nav a.active {
-  background: black;
+  background: var(--color-bar-4);
   color: white;
 }
 
 .social-list {
-  /* border-top: 1px solid var(--color-bar-4); */
   margin-left: 3rem;
   padding: 1rem 0;
 }
@@ -44,7 +42,7 @@
 }
 
 .email a {
-  color: black;
+  color: var(--color-bar-4);
 }
 
 /* responsive */

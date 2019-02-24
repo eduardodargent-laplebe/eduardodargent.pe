@@ -1,34 +1,51 @@
 import React from 'react'
 import Page from '../components/Page'
+import { graphql } from 'gatsby'
+import './ideas.css'
 
-export default () => (
-  <Page>
-    <section className="idea">
-      <h1 className="section-title">
-        {' '}
-        AENEAN SED SAPIEN QUIS ARCU SODALES INTERDUM EU EGET ODIO{' '}
-      </h1>
-      <div className="date">20 de enero 2018</div>
-      <div className="idea-text">
-        <p>
-          Praesent auctor sem in augue facilisis, tincidunt bibendum urna
-          volutpat. Sed sagittis lectus odio, vel pretium dui ultricies sit
-          amet. Mauris vehicula ante a ante consequat pretium. Quisque facilisis
-          porta fermentum. Etiam faucibus, elit ac ultricies
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris purus
-          mauris, ornare fermentum viverra at, ornare ac purus. Proin enim sem,
-          accumsan nec vestibulum quis, sodales in odio. Curabitur aliquam
-          feugiat sapien sit amet mollis. Vivamus pulvinar tortor et aliquet
-          viverra. Suspendisse quis sapien elit. Ut porta mauris ipsum, vel
-          posuere felis malesuada et. Maecenas commodo ultricies lectus, at
-          facilisis ex blandit vitae. Aenean egestas sapien ut sonc ut neque
-          laoreet tincidunt. Vestibulum placerat augue non dapibus mollis.
-          Suspendisse maximus justo fringilla ante scelerisque, nec tincidunt ex
-          condimentum.
-        </p>
+export default ({ data }) => {
+  return (
+    <Page class="ideas">
+      <div className="grid">
+        {data.allContentfulIdeas.edges.map((edge, i) => (
+          <a href={`./${edge.node.slug}`} className="card" key={i}>
+            <div
+              className="card-image"
+              style={{ backgroundImage: `url(${edge.node.foto.file.url})` }}
+            />
+            <h2 className="card-title">{edge.node.titulo}</h2>
+            <div className="card-date">{edge.node.fecha}</div>
+            <div className="card-excerpt">
+              {edge.node.texto.childMarkdownRemark.excerpt}
+            </div>
+          </a>
+        ))}
       </div>
-    </section>
-  </Page>
-)
+    </Page>
+  )
+}
+
+export const ideasQuery = graphql`
+  query {
+    allContentfulIdeas(sort: { fields: fecha, order: DESC }) {
+      edges {
+        node {
+          slug
+          titulo
+          fecha
+          foto {
+            file {
+              url
+            }
+          }
+          texto {
+            childMarkdownRemark {
+              excerpt
+              html
+            }
+          }
+        }
+      }
+    }
+  }
+`

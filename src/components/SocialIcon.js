@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/SocialIcon.css'
+import './SocialIcon.css'
 
 export default ({ name, url, isLink, fx }) => {
   const icon = {
