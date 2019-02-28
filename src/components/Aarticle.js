@@ -1,7 +1,7 @@
 import React from 'react'
-import Page from '../components/Page'
+import Page from './Page'
 import { graphql } from 'gatsby'
-import './article.css'
+import './Aarticle.css'
 
 export default ({ data }) => {
   let edge = data.allContentfulIdeas.edges[0]
@@ -22,8 +22,8 @@ export default ({ data }) => {
             />
           </div>
         </div>
-
         <div
+          className="article-text"
           dangerouslySetInnerHTML={{
             __html: edge.node.texto.childMarkdownRemark.html,
           }}

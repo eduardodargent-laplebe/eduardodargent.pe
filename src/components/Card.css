@@ -1,0 +1,44 @@
+.card {
+  background: var(--color-bar-1--hover);
+}
+
+.card:hover {
+  background: var(--color-bar-4);
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-bar-4);
+  height: 100%;
+}
+
+.card a:hover {
+  color: white;
+}
+
+.card-image {
+  width: 100%;
+  height: 12rem;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  margin-bottom: 0.5rem;
+  color: var(--color-bar-2);
+  flex-grow: 1;
+}
+
+.card-date {
+  font-size: var(--font-size--details);
+  margin-bottom: 1rem;
+}
+
+.card-excerpt {
+  font-size: var(--font-size--details);
+}

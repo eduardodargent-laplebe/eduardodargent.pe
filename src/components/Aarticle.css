@@ -16,12 +16,9 @@
   flex-direction: column;
 }
 
-.article-image {
-  width: 100%;
-}
-
 .article-taxonomy {
   flex-grow: 1;
+  font-size: var(--font-size--details);
 }
 
 .article-title {
@@ -34,6 +31,10 @@
   font-size: var(--font-size--details);
 }
 
-.article-text {
-  font-size: var(--font-size--details);
+.article-image {
+  width: 100%;
+}
+
+.article-text a {
+  color: var(--color-bar-3);
 }

@@ -32,6 +32,11 @@
   color: white;
 }
 
+.nav a.active:hover {
+  background: var(--color-bar-3);
+  color: white;
+}
+
 .social-list {
   margin-left: 3rem;
   padding: 1rem 0;

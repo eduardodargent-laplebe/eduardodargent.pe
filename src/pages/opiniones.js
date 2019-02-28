@@ -1,59 +1,38 @@
 import React from 'react'
 import Page from '../components/Page'
+import Card from '../components/Card'
+import { graphql } from 'gatsby'
+import './opiniones.css'
 
-export default () => (
-  <Page>
-    <section className="opinions">
-      <div className="opinions-list">
-        <div className="source">
-          <div className="source-tittle">
-            <h3>LA REPÚBLICA</h3>
-          </div>
-          <div className="source-summary">
-            <p>Aenean sed sapien quis eget odio.</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="source-summary">
-            <p>Praesent auctor sem in augue facilisis</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="more">
-            <a href="http://www.google.com">+</a>
-          </div>
-        </div>
-        <div className="source">
-          <div className="source-tittle">
-            <h3>DIARIO 16</h3>
-          </div>
-          <div className="source-summary">
-            <p>Aenean sed sapien quis eget odio.</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="source-summary">
-            <p>Praesent auctor sem in augue facilisis</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="more">
-            <a href="http://www.google.com">+</a>
-          </div>
-        </div>
-        <div className="source">
-          <div className="source-tittle">
-            <h3>REVISTA VELAVERDE</h3>
-          </div>
-          <div className="source-summary">
-            <p>Aenean sed sapien quis eget odio.</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="source-summary">
-            <p>Praesent auctor sem in augue facilisis</p>
-          </div>
-          <div className="date">20 de enero 2018</div>
-          <div className="more">
-            <a href="http://www.google.com">+</a>
-          </div>
-        </div>
+export default ({ data }) => {
+  return (
+    <Page class="opiniones">
+      <div className="grid">
+        {data.allContentfulOpiniones.edges.map((edge, i) => (
+          <Card key={i}>
+            <a href={edge.node.url}>
+              <h2 className="card-title">{edge.node.titulo}</h2>
+              <div className="card-media">{edge.node.medio}</div>
+              <div className="card-date">{edge.node.fecha}</div>
+            </a>
+          </Card>
+        ))}
       </div>
-    </section>
-  </Page>
-)
+    </Page>
+  )
+}
+
+export const opinionesQuery = graphql`
+  query {
+    allContentfulOpiniones(sort: { fields: fecha, order: DESC }) {
+      edges {
+        node {
+          titulo
+          medio
+          fecha
+          url
+        }
+      }
+    }
+  }
+`
