@@ -9,12 +9,6 @@
   flex-grow: 1;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3rem;
-}
-
 /* responsive */
 
 @media (max-width: 900px) {

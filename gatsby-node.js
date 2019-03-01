@@ -19,7 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allContentfulIdeas.edges.forEach(edge => {
       createPage({
         path: `ideas/${edge.node.slug}`,
-        component: path.resolve(`./src/components/Aarticle.js`),
+        component: path.resolve(`./src/components/Article.js`),
         context: {
           slug: edge.node.slug,
         },

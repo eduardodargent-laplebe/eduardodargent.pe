@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from './Page'
 import { graphql } from 'gatsby'
-import './Aarticle.css'
+import './Article.css'
 
 export default ({ data }) => {
   let edge = data.allContentfulIdeas.edges[0]

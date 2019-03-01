@@ -1,8 +1,20 @@
-.opiniones .grid {
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-gap: 3rem; */
+.opiniones-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
 }
 
-.opiniones .card-date {
+.opiniones-items .card a {
+  flex-direction: row;
+  align-items: center;
+}
+
+.opiniones-items .card a > div:first-child {
+  flex-shrink: 0;
+  flex-basis: 100px;
+  margin-right: 1rem;
+}
+
+.opiniones-items .card-date {
   margin-bottom: 0;
 }

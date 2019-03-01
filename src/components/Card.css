@@ -19,6 +19,10 @@
   color: white;
 }
 
+.card a:hover .card-title {
+  color: var(--color-bar-2--hover);
+}
+
 .card-image {
   width: 100%;
   height: 12rem;
@@ -34,11 +38,19 @@
   flex-grow: 1;
 }
 
+.card-media {
+  font-weight: bold;
+}
+
 .card-date {
   font-size: var(--font-size--details);
   margin-bottom: 1rem;
 }
 
 .card-excerpt {
+  font-size: var(--font-size--details);
+}
+
+.card-description {
   font-size: var(--font-size--details);
 }

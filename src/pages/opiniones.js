@@ -7,13 +7,20 @@ import './opiniones.css'
 export default ({ data }) => {
   return (
     <Page class="opiniones">
-      <div className="grid">
+      <div className="opiniones-items">
         {data.allContentfulOpiniones.edges.map((edge, i) => (
           <Card key={i}>
             <a href={edge.node.url}>
-              <h2 className="card-title">{edge.node.titulo}</h2>
-              <div className="card-media">{edge.node.medio}</div>
-              <div className="card-date">{edge.node.fecha}</div>
+              <div>
+                <div className="card-date">{edge.node.fecha}</div>
+                <div className="card-media">{edge.node.medio}</div>
+              </div>
+              <div>
+                <h2 className="card-title">{edge.node.titulo}</h2>
+                <div className="card-description">
+                  {edge.node.descripcion.descripcion}
+                </div>
+              </div>
             </a>
           </Card>
         ))}
@@ -30,6 +37,9 @@ export const opinionesQuery = graphql`
           titulo
           medio
           fecha
+          descripcion {
+            descripcion
+          }
           url
         }
       }

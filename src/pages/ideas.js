@@ -7,7 +7,7 @@ import './ideas.css'
 export default ({ data }) => {
   return (
     <Page class="ideas">
-      <div className="grid">
+      <div className="ideas-items">
         {data.allContentfulIdeas.edges.map((edge, i) => (
           <Card key={i}>
             <Link to={`/ideas/${edge.node.slug}`}>
