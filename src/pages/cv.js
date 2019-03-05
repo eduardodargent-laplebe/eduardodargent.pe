@@ -4,9 +4,6 @@ import { graphql } from 'gatsby'
 import './cv.css'
 
 export default ({ data }) => {
-  // const foto = data.allContentfulCv.edges[0].node.foto.file.url
-  // const texto =
-  //   data.allContentfulCv.edges[0].node.texto.childMarkdownRemark.html
   let edge = data.allContentfulCv.edges[0]
   return (
     <Page class="cv">

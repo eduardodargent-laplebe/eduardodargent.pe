@@ -10,8 +10,9 @@ export default ({ data }) => {
       <div className="article-content">
         <div className="article-header">
           <div className="article-data">
-            <div className="article-taxonomy">IDEAS</div>
-            <h1 className="article-title">{edge.node.titulo}</h1>
+            <div className="article-title">
+              <h1>{edge.node.titulo}</h1>
+            </div>
             <div className="article-date">{edge.node.fecha}</div>
           </div>
           <div>

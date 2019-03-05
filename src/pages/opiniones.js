@@ -13,7 +13,7 @@ export default ({ data }) => {
       <div className="opiniones-items">
         {data.allContentfulOpiniones.edges.map((edge, i) => (
           <Card key={i}>
-            <a href={edge.node.url}>
+            <a href={edge.node.url} target="_blank">
               <div>
                 <div className="card-date">{edge.node.fecha}</div>
                 <div className="card-media">{edge.node.medio}</div>
