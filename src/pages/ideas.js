@@ -44,7 +44,6 @@ export const ideasQuery = graphql`
           texto {
             childMarkdownRemark {
               excerpt
-              html
             }
           }
         }

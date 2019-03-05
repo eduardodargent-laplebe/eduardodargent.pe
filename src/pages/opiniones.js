@@ -13,16 +13,19 @@ export default ({ data }) => {
       <div className="opiniones-items">
         {data.allContentfulOpiniones.edges.map((edge, i) => (
           <Card key={i}>
-            <a href={edge.node.url} target="_blank">
-              <div>
+            <a href={edge.node.url} target="_blank" rel="noopener noreferrer">
+              <div className="card-header">
                 <div className="card-date">{edge.node.fecha}</div>
                 <div className="card-media">{edge.node.medio}</div>
               </div>
-              <div>
+              <div className="card-main">
                 <h2 className="card-title">{edge.node.titulo}</h2>
                 <div className="card-description">
                   {edge.node.descripcion.descripcion}
                 </div>
+              </div>
+              <div className="card-footer">
+                <i className="material-icons">launch</i>
               </div>
             </a>
           </Card>

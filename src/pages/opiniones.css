@@ -9,12 +9,21 @@
   align-items: center;
 }
 
-.opiniones-items .card a > div:first-child {
+.opiniones-items .card-header {
   flex-shrink: 0;
-  flex-basis: 100px;
+  flex-basis: 90px;
   margin-right: 1rem;
 }
 
 .opiniones-items .card-date {
   margin-bottom: 0;
+}
+
+.opiniones-items .card-main {
+  flex-grow: 1;
+}
+
+.opiniones-items .card-footer .material-icons {
+  font-size: var(--font-size--menu);
+  margin-left: 1rem;
 }

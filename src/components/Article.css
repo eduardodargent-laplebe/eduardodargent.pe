@@ -26,7 +26,6 @@
 .article-title h1 {
   font-family: var(--font-serif);
   color: var(--color-bar-2);
-  margin-bottom: 0.5rem;
 }
 
 .article-date {

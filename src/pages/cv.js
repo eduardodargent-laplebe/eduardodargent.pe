@@ -13,11 +13,13 @@ export default ({ data }) => {
             <div className="cv-title">
               <h1>Eduardo Dargent Bocanegra</h1>
             </div>
-            <div>
-              <a className="cv-email" href="mailto:edargent@pucp.edu.pe">
-                edargent@pucp.edu.pe
-              </a>
-              <div>998996519 - 4451887</div>
+            <div className="cv-email">
+              <i className="material-icons">email</i>
+              <a href="mailto:edargent@pucp.edu.pe">edargent@pucp.edu.pe</a>
+            </div>
+            <div className="cv-phone">
+              <i className="material-icons">phone</i>
+              <span>(+51) 998 996 519 - (+51) 01 4451887</span>
             </div>
           </div>
           <div>

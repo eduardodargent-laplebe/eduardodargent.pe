@@ -26,11 +26,22 @@
 .cv-title h1 {
   font-family: var(--font-serif);
   color: var(--color-bar-2);
+}
+
+.cv-email,
+.cv-phone {
+  display: flex;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.cv-email {
+.cv-email a {
   color: var(--color-bar-4);
+}
+
+.cv-data .material-icons {
+  font-size: 1rem;
+  margin-right: 0.5rem;
 }
 
 .cv-image {
