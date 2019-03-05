@@ -4,7 +4,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allContentfulIdeas(sort: { fields: fecha, order: DESC }) {
+      allContentfulIdeas(limit: 1000, sort: { fields: fecha, order: DESC }) {
         edges {
           node {
             slug
@@ -13,9 +13,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    // if (result.errors) {
-    //   throw result.errors
-    // }
     result.data.allContentfulIdeas.edges.forEach(edge => {
       createPage({
         path: `ideas/${edge.node.slug}`,

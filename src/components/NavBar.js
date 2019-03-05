@@ -78,7 +78,7 @@ export default class NavBar extends React.Component {
           <SocialIcon name="twitter" isLink url="http://www.google.com" />
         </div>
         <div className="email">
-          <a href="mailto:edargent@gmail.com">edargent@gmail.com</a>
+          <a href="mailto:edargent@pucp.edu.pe">edargent@pucp.edu.pe</a>
         </div>
       </div>
     )

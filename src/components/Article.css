@@ -1,4 +1,4 @@
-.article {
+.article-content {
   background: var(--color-bar-1--hover);
   padding: 3rem;
   min-height: 100%;
@@ -16,12 +16,14 @@
   flex-direction: column;
 }
 
-.article-taxonomy {
+.article-title {
   flex-grow: 1;
-  font-size: var(--font-size--details);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.article-title {
+.article-title h1 {
   font-family: var(--font-serif);
   color: var(--color-bar-2);
   margin-bottom: 0.5rem;

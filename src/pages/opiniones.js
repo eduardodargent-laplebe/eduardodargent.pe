@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 import './opiniones.css'
 
 export default ({ data }) => {
+  // var array = [1, 2, 1, 4, 1, 3]
+  // var result = [...new Set(array)]
+  // console.log(result)
   return (
     <Page class="opiniones">
       <div className="opiniones-items">

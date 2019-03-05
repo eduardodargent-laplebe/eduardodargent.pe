@@ -4,20 +4,40 @@ import { graphql } from 'gatsby'
 import './cv.css'
 
 export default ({ data }) => {
-  const foto = data.allContentfulCv.edges[0].node.foto.file.url
-  const texto =
-    data.allContentfulCv.edges[0].node.texto.childMarkdownRemark.html
+  // const foto = data.allContentfulCv.edges[0].node.foto.file.url
+  // const texto =
+  //   data.allContentfulCv.edges[0].node.texto.childMarkdownRemark.html
+  let edge = data.allContentfulCv.edges[0]
   return (
     <Page class="cv">
-      <div className="hero">
-        <img alt="" className="hero-img" src={foto} />
-      </div>
-      <div className="text">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: texto,
-          }}
-        />
+      <div className="cv-content">
+        <div className="cv-header">
+          <div className="cv-data">
+            <div className="cv-title">
+              <h1>Eduardo Dargent Bocanegra</h1>
+            </div>
+            <div>
+              <a className="cv-email" href="mailto:edargent@pucp.edu.pe">
+                edargent@pucp.edu.pe
+              </a>
+              <div>998996519 - 4451887</div>
+            </div>
+          </div>
+          <div>
+            <img
+              className="cv-image"
+              src={edge.node.foto.file.url}
+              alt="cover"
+            />
+          </div>
+        </div>
+        <div className="cv-text">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: edge.node.texto.childMarkdownRemark.html,
+            }}
+          />
+        </div>
       </div>
     </Page>
   )

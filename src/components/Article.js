@@ -7,7 +7,7 @@ export default ({ data }) => {
   let edge = data.allContentfulIdeas.edges[0]
   return (
     <Page class="ideas-article">
-      <div className="article">
+      <div className="article-content">
         <div className="article-header">
           <div className="article-data">
             <div className="article-taxonomy">IDEAS</div>
