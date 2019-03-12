@@ -44,12 +44,12 @@ export default class NavBar extends React.Component {
           </Link>
           <Link
             onClick={this.closeMenu}
-            to="/ideas/"
+            to="/blog/"
             getProps={({ isPartiallyCurrent }) =>
               isPartiallyCurrent ? { className: 'active' } : null
             }
           >
-            IDEAS
+            BLOG
           </Link>
           <Link
             onClick={this.closeMenu}
@@ -57,6 +57,9 @@ export default class NavBar extends React.Component {
             activeClassName="active"
           >
             OPINIONES
+          </Link>
+          <Link onClick={this.closeMenu} to="/libros/" activeClassName="active">
+            LIBROS
           </Link>
           <Link
             onClick={this.closeMenu}

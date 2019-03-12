@@ -10,7 +10,7 @@ export default ({ data }) => {
       <div className="ideas-items">
         {data.allContentfulIdeas.edges.map((edge, i) => (
           <Card key={i}>
-            <Link to={`/ideas/${edge.node.slug}`}>
+            <Link to={`/blog/${edge.node.slug}`}>
               <div
                 className="card-image"
                 style={{ backgroundImage: `url(${edge.node.foto.file.url})` }}
