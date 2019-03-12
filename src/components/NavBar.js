@@ -58,7 +58,13 @@ export default class NavBar extends React.Component {
           >
             OPINIONES
           </Link>
-          <Link onClick={this.closeMenu} to="/libros/" activeClassName="active">
+          <Link
+            onClick={this.closeMenu}
+            to="/libros/"
+            getProps={({ isPartiallyCurrent }) =>
+              isPartiallyCurrent ? { className: 'active' } : null
+            }
+          >
             LIBROS
           </Link>
           <Link

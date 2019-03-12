@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allContentfulLibros.edges.forEach(edge => {
       createPage({
         path: `libros/${edge.node.slug}`,
-        component: path.resolve(`./src/components/Article.js`),
+        component: path.resolve(`./src/components/Libro.js`),
         context: {
           slug: edge.node.slug,
         },
