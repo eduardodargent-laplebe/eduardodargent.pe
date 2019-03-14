@@ -24,16 +24,16 @@ export default ({ data }) => {
           </Card>
         ))}
       </div>
-      <nav className="blog-items-nav">
-        <a className="blog-items-nav--left" href="#">
+      {/* <nav className="blog-items-nav">
+        <a className="blog-items-nav--left" href="http://www.google.com">
           <i className="material-icons">navigate_before</i>
           <span>anterior</span>
         </a>
-        <a className="blog-items-nav--right" href="#">
+        <a className="blog-items-nav--right" href="http://www.google.com">
           <span>siguiente</span>
           <i className="material-icons">navigate_next</i>
         </a>
-      </nav>
+      </nav> */}
     </Page>
   )
 }
