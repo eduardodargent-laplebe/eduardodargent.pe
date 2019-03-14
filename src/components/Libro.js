@@ -13,7 +13,13 @@ export default ({ data }) => {
             <div className="article-title">
               <h1>{edge.node.titulo}</h1>
             </div>
+            <div className="article-date">Créditos: "agregar al cms"</div>
+            <div className="article-date">{edge.node.editorial}</div>
             <div className="article-date">{edge.node.anho}</div>
+            <div className="article-date">{edge.node.lugar}</div>
+            <a href={edge.node.tienda} target="_blank">
+              Comprar
+            </a>
           </div>
           <div>
             <img
@@ -29,6 +35,13 @@ export default ({ data }) => {
             __html: edge.node.descripcion.childMarkdownRemark.html,
           }}
         />
+        <h2>Referencias:</h2>
+        <div
+          className="article-text"
+          dangerouslySetInnerHTML={{
+            __html: edge.node.referencias.childMarkdownRemark.html,
+          }}
+        />
       </div>
     </Page>
   )
@@ -40,13 +53,21 @@ export const articleQuery = graphql`
       edges {
         node {
           titulo
+          editorial
           anho
+          lugar
+          tienda
           portada {
             file {
               url
             }
           }
           descripcion {
+            childMarkdownRemark {
+              html
+            }
+          }
+          referencias {
             childMarkdownRemark {
               html
             }

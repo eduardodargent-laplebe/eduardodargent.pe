@@ -2,12 +2,12 @@ import React from 'react'
 import Page from '../components/Page'
 import Card from '../components/Card'
 import { Link, graphql } from 'gatsby'
-import './ideas.css'
+import './blog.css'
 
 export default ({ data }) => {
   return (
-    <Page class="ideas">
-      <div className="ideas-items">
+    <Page class="blog">
+      <div className="blog-items">
         {data.allContentfulIdeas.edges.map((edge, i) => (
           <Card key={i}>
             <Link to={`/blog/${edge.node.slug}`}>
@@ -24,6 +24,16 @@ export default ({ data }) => {
           </Card>
         ))}
       </div>
+      <nav className="blog-items-nav">
+        <a className="blog-items-nav--left" href="#">
+          <i className="material-icons">navigate_before</i>
+          <span>anterior</span>
+        </a>
+        <a className="blog-items-nav--right" href="#">
+          <span>siguiente</span>
+          <i className="material-icons">navigate_next</i>
+        </a>
+      </nav>
     </Page>
   )
 }

@@ -1,0 +1,30 @@
+.blog-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.blog-items-nav {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.blog-items-nav a {
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+}
+
+.blog-items-nav a i {
+  font-size: 1rem;
+}
+
+.blog-items-nav a span {
+  font-size: var(--font-size--details);
+}
+
+.blog-items-nav--right {
+  right: 0;
+}
